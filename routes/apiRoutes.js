@@ -10,7 +10,7 @@ fs.readFile('./db/db.json', 'utf8', (err, data) => {
 }
 )
 })
-    router.post('/api/notes', (req, res) => {
+    router.post('/notes', (req, res) => {
         let newNoteToSave = {
             ...req.body,}
         notes.push(newNote);
