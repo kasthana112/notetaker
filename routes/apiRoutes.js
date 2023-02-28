@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const fs = require('fs');
+const uuidv1 = require('uuid/v1');
+
 
 
 router.get('/notes', (req, res) =>{
@@ -15,7 +17,7 @@ fs.readFile('./db/db.json', 'utf8', (err, data) => {
     router.post('/notes', (req, res) => {
         console.log("post notes route");
         let newNoteToSave = {
-            ...req.body,}
+            ...req.body, id:uuidv1()}
     //    // notes.push(newNote);
     //     updateDb();
 
