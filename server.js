@@ -24,7 +24,7 @@ app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
-app.post('/api/notes', (req, res) => {
+app.post('/notes', (req, res) => {
     // save the new note using req.body
 })
 

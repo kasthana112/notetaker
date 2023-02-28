@@ -3,6 +3,8 @@ const fs = require('fs');
 
 
 router.get('/notes', (req, res) =>{
+    console.log("get notes route");
+    
 fs.readFile('./db/db.json', 'utf8', (err, data) => {
     if (err) throw err;
     res.json(JSON.parse(data));
@@ -11,15 +13,16 @@ fs.readFile('./db/db.json', 'utf8', (err, data) => {
 )
 })
     router.post('/notes', (req, res) => {
+        console.log("post notes route");
         let newNoteToSave = {
             ...req.body,}
-        notes.push(newNote);
-        updateDb();
+    //    // notes.push(newNote);
+    //     updateDb();
 
-        db.push(newNoteToSave);
-        fs.writeFileSync('./db/db.json', JSON.stringify(db),function(err){
-            if(err) throw err;
-        });
+    //     db.push(newNoteToSave);
+    //     fs.writeFileSync('./db/db.json', JSON.stringify(db),function(err){
+    //         if(err) throw err;
+    //     // });//
     });
 
     function updateDb() {
@@ -27,7 +30,7 @@ fs.readFile('./db/db.json', 'utf8', (err, data) => {
             if (err) throw err;
         });
 
-        res.json(notes);
+        //res.json(notes);/
         console.log(notes);
     }
 //comments//
