@@ -33,6 +33,7 @@ const getNotes = () =>
     },
   });
 
+// localhost:3001/api/notes
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
