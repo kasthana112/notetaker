@@ -15,6 +15,11 @@ fs.readFile('./db/db.json', 'utf8', (err, data) => {
             ...req.body,}
         notes.push(newNote);
         updateDb();
+
+        db.push(newNoteToSave);
+        fs.writeFileSync('./db/db.json', JSON.stringify(db),function(err){
+            if(err) throw err;
+        });
     });
 
     function updateDb() {
