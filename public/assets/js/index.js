@@ -26,16 +26,15 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('/notes', {
+  fetch('/api/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   });
 
-// localhost:3001/api/notes
 const saveNote = (note) =>
-  fetch('/notes', {
+  fetch('/api/notes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
