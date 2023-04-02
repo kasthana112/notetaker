@@ -1,0 +1,17 @@
+{
+  "name": "notetaker",
+  "version": "1.0.0",
+  "description": "Note Take Module 11 By Kanika Asthana Worked with study groups and tutor Andrew Tirpok",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.0"
+  }
+}
